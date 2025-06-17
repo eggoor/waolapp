@@ -1,0 +1,23 @@
+#define APSTUDIO_READONLY_SYMBOLS
+
+#include "winres.h"
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+1 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+101               ICON                    "icons\\Waola.ico"
+

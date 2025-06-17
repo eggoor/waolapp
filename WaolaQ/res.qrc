@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/01wakeup.svg</file>
+        <file>icons/02scan.svg</file>
+        <file>icons/03scan_cancel.svg</file>
+        <file>icons/04refresh.svg</file>
+        <file>icons/05refresh_cancel.svg</file>
+        <file>icons/06copy.svg</file>
+        <file>icons/07add.svg</file>
+        <file>icons/08edit.svg</file>
+        <file>icons/09delete.svg</file>
+        <file>icons/10about.svg</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>+macos/qtquickcontrols2.conf</file>
+        <file>LICENSE.txt</file>
+        <file>+windows/qtquickcontrols2.conf</file>
+        <file>+linux/qtquickcontrols2.conf</file>
+    </qresource>
+</RCC>

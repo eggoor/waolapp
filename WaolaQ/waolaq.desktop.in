@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WaolaQ
+Exec=@CMAKE_INSTALL_PREFIX@/bin/waolaq
+Type=Application
+Icon=waolaq
+Terminal=false
+Categories=Network;Utility;
+Comment=Wake on LAN utility
+

@@ -40,7 +40,7 @@ hosts_t Subnet::extractSubnetHosts(hosts_t& hosts) const
 
 	const auto it = 
 		
-#if __cplusplus >= 202002L
+#if __cplusplus >= 202302L
 		std::ranges::remove_if(hosts,
 		[this, &subnetHosts]<typename THost>(THost&& host) {
 			if (belongs(host)) {

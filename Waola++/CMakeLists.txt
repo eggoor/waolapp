@@ -127,7 +127,7 @@ target_precompile_headers(${TARGET_NAME}
 		include/Platform.h
 )
 
-if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+if (UNIX)
 	target_precompile_headers(${TARGET_NAME}
 			PUBLIC
 				<atomic>

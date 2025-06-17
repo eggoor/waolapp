@@ -24,3 +24,8 @@ jobs:
 
     - name: Build
       run: cmake --build build --config Release -j
+
+    - name: Run unit tests
+      run: ctest --test-dir build --output-on-failure
+      env:
+        CTEST_OUTPUT_ON_FAILURE: 1

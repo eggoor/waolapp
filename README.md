@@ -13,7 +13,7 @@ For the GUI frontend, you also need a [Qt](https://www.qt.io/) library (version 
 ## Building.
 * Linux and macOS
     ```
-    cd waola++
+    cd waolapp
     cmake -S . -B release
     cmake --build release -j
     ```
@@ -31,7 +31,7 @@ For the GUI frontend, you also need a [Qt](https://www.qt.io/) library (version 
 
 * Windows
     ```
-    cd waola++
+    cd waolapp
     cmake -S . -B release
     cmake --build release --config Release
     ```

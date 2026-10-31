@@ -13,7 +13,7 @@ namespace Wpp {
 		virtual ~IKnockerUpper() = default;
 
 		virtual void wakeUp(const class Subnet& subNet, const hosts_t& hosts) = 0;
-		virtual bool wakeUp(subnets_t&& subNets, const macs_t& macs) = 0;
+		virtual bool wakeUp(const subnets_t& subNets, const macs_t& macs) = 0;
 	};
 } // Wpp
 

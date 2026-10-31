@@ -167,7 +167,7 @@ TEST_F(NetworkTestFixture, WakeUpTargetsCallsKnockerUpper)
 // Test Network::wakeUp(const args_t&) calls knockerUpper and returns its result
 TEST_F(NetworkTestFixture, WakeUpWithMacs_CallsKnockerUpperAndReturnsTrue) {
     auto knockerUpper = std::make_unique<MockIKnockerUpper>();
-    EXPECT_CALL(*knockerUpper, wakeUp(Matcher<subnets_t&&>(_), _))
+    EXPECT_CALL(*knockerUpper, wakeUp(Matcher<const subnets_t&>(_), _))
         .WillOnce(testing::Return(true));
 
 	auto snanerFactory = [this](const ScannerParams& sp) -> ScannerPtr {

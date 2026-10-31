@@ -8,7 +8,7 @@ namespace Wpp {
 class MockIKnockerUpper : public IKnockerUpper {
 public:
     MOCK_METHOD(void, wakeUp, (const Subnet&, const hosts_t&), (override));
-    MOCK_METHOD(bool, wakeUp, (subnets_t&&, const macs_t&), (override));
+    MOCK_METHOD(bool, wakeUp, (const subnets_t&, const macs_t&), (override));
 };
 } // namespace Wpp
 

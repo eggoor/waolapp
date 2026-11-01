@@ -77,8 +77,7 @@ namespace Wpp {
 	{
 		bool success = true;
 
-		const uint broadcast =
-		static_cast<uint>(subNet.SelfIp) | ~subNet.Mask;
+		const uint broadcast = static_cast<uint>(subNet.SelfIp) | ~subNet.Mask;
 		const auto destination = makeSin(broadcast, WolPort);
 
 		const auto s = makeSocket(subNet);

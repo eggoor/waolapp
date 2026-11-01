@@ -26,6 +26,7 @@ add_subdirectory(waolac++)
 find_package(Qt6 COMPONENTS Quick Svg QUIET)
 
 if (Qt6_FOUND)
+	message(STATUS "Using Qt6 found at ${Qt6_DIR}")
 	set(TARGET_WAOLAQT WaolaQt)
 	if (CMAKE_SYSTEM_NAME MATCHES "Linux")
 		string(TOLOWER ${TARGET_WAOLAQT} TARGET_WAOLAQT)
@@ -38,7 +39,7 @@ if (Qt6_FOUND)
 	endif()
 	add_subdirectory(WaolaQ)
 else()
-	message(STATUS "Skipping waolaq GUI frontend since Qt6 not found")
+	message(WARNING "Skipping waolaq GUI frontend since Qt6 not found")
 endif()
 
 configure_file(

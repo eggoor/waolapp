@@ -56,7 +56,7 @@ namespace Wpp {
 	{
 		makeMagicPacket(macAddr);
 
-		auto sentBytes = sendto(sock, magicPacket.data(), MagicPacketSize,
+		auto sentBytes = sendto(sock, std::bit_cast<const char*>(magicPacket.data()), MagicPacketSize,
 			0, std::bit_cast<sockaddr*>(&destination), sizeof(destination));
 
 		return sentBytes == MagicPacketSize;
@@ -121,7 +121,13 @@ namespace Wpp {
 				"failed to bind WoL socket");
 		}
 
-		constexpr int True = 1;
+		constexpr
+#if defined(_WIN32)
+			char
+#else
+			int
+#endif
+		True = 1;
 
 		rc = setsockopt(s, SOL_SOCKET, SO_BROADCAST, &True, sizeof(int));
 
